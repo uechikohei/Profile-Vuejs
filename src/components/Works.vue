@@ -1,12 +1,14 @@
 <template>
-  <v-app>
-    <v-container>
+  <v-app style="background-color: #F4F9E2;">
+    <v-container class="footer">
       <v-layout text-center>
         <v-flex>
-          <h1 data-aos="fade-up">Works</h1>
+          <h1 data-aos="fade-up" style="color: #436FB4;" class="font__m">
+            Works
+          </h1>
         </v-flex>
       </v-layout>
-      <v-layout justify-center>
+      <v-layout justify-center raw wrap>
         <v-flex
           mt-9
           mb-3
@@ -23,10 +25,10 @@
               :src="item.pic"
               height="200px"
             ></v-img>
-            <v-card-title>
+            <v-card-title class="font__m">
               <h5>{{ item.title }}</h5>
             </v-card-title>
-            <v-card-subtitle>
+            <v-card-subtitle class="font__s">
               {{ item.subtitle }}
             </v-card-subtitle>
             <v-card-actions>
@@ -57,7 +59,7 @@
             <v-expand-transition>
               <div v-show="item.show">
                 <v-divider></v-divider>
-                <v-card-text>
+                <v-card-text class="font__s">
                   <p style="white-space:pre-wrap; word-wrap:break-word;">{{item.desc}}</p>
                 </v-card-text>
               </div>
@@ -78,7 +80,9 @@ export default {
           title: 'SkateSpotSearch',
           subtitle: 'Ruby + Rails + docker + googlemapsAPI + circleci + AWS(rolling update)',
           desc: `SkateSpotSearchは、スケボーができる場所をシェアできるアプリです。
-他のスケボーパーク紹介サイトと異なりgooglemap上なら'どこでも誰でも'スポットとして投稿でき、更新していく事ができるのが最大の特徴です。
+他のスケボーパーク紹介サイトと異なり、googlemap上なら'どこでも誰でも'スポットとして投稿できる点。
+また、ユーザによって更新していく事ができるのが最大の特徴です。
+
 テック系YouTuberとして著名な勝又健太氏によるエンジニアサロン内のレビュー担当の方には
 "独自性の高いテーマ"
 "UIがシンプルに整理されていて見やすい"
@@ -89,10 +93,36 @@ export default {
 "テストもある程度書かれている"
 "GitHubを適切に活用した実務意識の開発ができている"
 極めて高い評価を頂きました。
+
 `,
           show: false,
-          github: 'https://github.com/uechikohei/SkateSpotSearch'}
+          github: 'https://github.com/uechikohei/SkateSpotSearch'},
+          { id: "2",
+            pic:  require('@/assets/vue.png'),
+            title: 'Profile Page',
+            subtitle: 'Vue.js(2.6.11) + Vuetify(2.2.11) + Vue-router(3.4.8)',
+            desc: `現在閲覧して頂いているサイトになります。
+
+転職活動と並行してJSフレームワークの中でも採用率の高いvue.jsを学習したいと考え採用しました。
+開発環境は、vuejsをローカルにインストールしVScodeエディタで進行しました。
+`,
+            show: false,
+            demo: '',
+            github: 'https://github.com/uechikohei/Profile-Vuejs'
+            },
       ],
   }),
 };
 </script>
+
+<style scoped lang="scss">
+.footer {
+  margin-bottom: 100px;
+}
+.font__s {
+  font-size: 2rem;
+}
+.font__m {
+  font-size: 3.5rem;
+}
+</style>

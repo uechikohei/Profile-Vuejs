@@ -1,10 +1,12 @@
 <template>
-  <v-app>
+  <v-app style="background-color: #F4F9E2;">
     <v-container>
       <v-layout text-center>
         <v-flex>
-          <h2>uechi kohei</h2>
-            <h3>
+          <h1 class="font__m">
+            uechi kohei
+          </h1>
+            <h3  class="font__m">
               <vue-typer
                 text= " - web developer - "
                 :repeat="0"
@@ -30,9 +32,12 @@
         <v-flex xs10>
           <div class="font__xs">
             <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">1993/3/21 (27歳)</h2><br>
-            <h2>趣味</h2>
+            <h3>趣味</h3>
             <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                料理とスケートボード</p><br>
+                料理とスケートボード</p>
+            <h3>資格</h3>
+            <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                AWS認定ソリューションアーキテクト アソシエイト</p><br>
           </div>
           <div class="profile__text">
             <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="mb-10">
@@ -94,10 +99,16 @@ export default {
 }
 
 .profile__text {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   color: gray;
 }
 .font__xs {
-  font-size: 1.0rem;
+  font-size: 1.8rem;
+}
+.font__s {
+  font-size: 2rem;
+}
+.font__m {
+  font-size: 3.5rem;
 }
 </style>
