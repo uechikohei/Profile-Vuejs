@@ -21,6 +21,7 @@
             width="13"
             :value="language.value"
             color="success"
+            class="font__s"
           >
             {{ language.name}}
           </v-progress-circular>
@@ -40,6 +41,7 @@
             width="13"
             :value="framework.value"
             color="success"
+            class="font__s"
           >
             {{ framework.name }}
           </v-progress-circular>
@@ -59,6 +61,7 @@
             width="13"
             :value="aws.value"
             color="success"
+            class="font__s"
           >
             {{ aws.name }}
           </v-progress-circular>
@@ -78,6 +81,7 @@
             width="13"
             :value="devops.value"
             color="success"
+            class="font__s"
           >
             {{ devops.name }}
           </v-progress-circular>
@@ -97,6 +101,7 @@
             width="13"
             :value="cooking.value"
             color="success"
+            class="font__s"
           >
             {{ cooking.name }}
           </v-progress-circular>
@@ -116,6 +121,7 @@
             width="13"
             :value="active.value"
             color="success"
+            class="font__s"
           >
             {{ active.name }}
           </v-progress-circular>
@@ -254,6 +260,9 @@ export default {
 }
 .footer {
   margin-bottom: 100px;
+}
+.font__s {
+  font-size: 1.8rem;
 }
 .font__m {
   font-size: 3.5rem;

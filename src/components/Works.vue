@@ -25,10 +25,10 @@
               :src="item.pic"
               height="200px"
             ></v-img>
-            <v-card-title class="font__m">
+            <v-card-title class="font__s">
               <h5>{{ item.title }}</h5>
             </v-card-title>
-            <v-card-subtitle class="font__s">
+            <v-card-subtitle class="font__xs">
               {{ item.subtitle }}
             </v-card-subtitle>
             <v-card-actions>
@@ -46,7 +46,7 @@
                 target="_blank"
                 :href="item.github"
               >
-                <v-fa :icon="['fab', 'github']" style="font-size:30px;" /> 
+                <v-fa :icon="['fab', 'github']" style="font-size:30px;" />
               </v-btn>
               <v-spacer></v-spacer>
               <v-btn
@@ -59,7 +59,7 @@
             <v-expand-transition>
               <div v-show="item.show">
                 <v-divider></v-divider>
-                <v-card-text class="font__s">
+                <v-card-text class="font__xxs">
                   <p style="white-space:pre-wrap; word-wrap:break-word;">{{item.desc}}</p>
                 </v-card-text>
               </div>
@@ -78,36 +78,42 @@ export default {
         { id: "1",
           pic: require('@/assets/sss.png'),
           title: 'SkateSpotSearch',
-          subtitle: 'Ruby + Rails + docker + googlemapsAPI + circleci + AWS(rolling update)',
+          subtitle: `
+Ruby + Ruby on Rails + Docker + Googlemaps API + CircleCI + AWS(rolling update)`,
           desc: `SkateSpotSearchは、スケボーができる場所をシェアできるアプリです。
 他のスケボーパーク紹介サイトと異なり、googlemap上なら'どこでも誰でも'スポットとして投稿できる点。
 また、ユーザによって更新していく事ができるのが最大の特徴です。
 
 テック系YouTuberとして著名な勝又健太氏によるエンジニアサロン内のレビュー担当の方には
+
 "独自性の高いテーマ"
 "UIがシンプルに整理されていて見やすい"
-"AWSの各種サービスを適切に利用し、未経験では珍しいローリングアップデートまで実現している"
+"AWSの各種サービスを適切に利用し、
+未経験では珍しいローリングアップデートまで実現している"
 "CIやDockerが導入等できている"
 "googlemap APIの各種サービスを自在に操れている"
 "Ruby, Rails共に最新に近いバージョンを使用している"
 "テストもある程度書かれている"
 "GitHubを適切に活用した実務意識の開発ができている"
+
 極めて高い評価を頂きました。
 
 `,
           show: false,
+          demo: 'https://sss.red-miso.work/',
           github: 'https://github.com/uechikohei/SkateSpotSearch'},
           { id: "2",
             pic:  require('@/assets/vue.png'),
             title: 'Profile Page',
-            subtitle: 'Vue.js(2.6.11) + Vuetify(2.2.11) + Vue-router(3.4.8)',
+            subtitle: 'Vue.js + Vuetify + Vue-router',
             desc: `現在閲覧して頂いているサイトになります。
 
-転職活動と並行してJSフレームワークの中でも採用率の高いvue.jsを学習したいと考え採用しました。
-開発環境は、vuejsをローカルにインストールしVScodeエディタで進行しました。
+転職活動と並行してJSフレームワークの中でも
+採用率の高いvue.jsを学習したいと考え採用しました。
+開発環境は、vuejsをローカルにインストール、VScodeエディタで進行しました。
 `,
             show: false,
-            demo: '',
+            demo: 'https://uechi-kohei.web.app/',
             github: 'https://github.com/uechikohei/Profile-Vuejs'
             },
       ],
@@ -118,6 +124,13 @@ export default {
 <style scoped lang="scss">
 .footer {
   margin-bottom: 100px;
+}
+.font__xxs {
+  font-size: 1.35rem;
+  line-height: 1.4em;
+}
+.font__xs {
+  font-size: 1.5rem;
 }
 .font__s {
   font-size: 2rem;

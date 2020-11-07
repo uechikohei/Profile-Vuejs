@@ -52,6 +52,7 @@
           block
           large
           color     ="success"
+          class="font__m"
         >
         SEND
         </v-btn>

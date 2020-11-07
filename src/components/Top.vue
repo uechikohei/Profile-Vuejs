@@ -99,7 +99,8 @@ export default {
 }
 
 .profile__text {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  line-height: 2.1em;
   color: gray;
 }
 .font__xs {
