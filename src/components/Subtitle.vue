@@ -6,9 +6,9 @@
 
 <script>
 export default {
-  props: ['skillCategory'],
+  props: ["skillCategory"],
   data: () => ({
     //
-  })
-}
+  }),
+};
 </script>
